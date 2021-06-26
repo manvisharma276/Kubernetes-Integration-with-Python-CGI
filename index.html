@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            K-Cloud
+        </title>
+    </head>
+    <style>
+        div#base{
+            position: relative;
+            text-align: center;
+            border: black solid 4px;
+            top: 10px;
+            bottom: 10px;
+            right: 10px;
+            left: 10px;
+            width: 96%;
+            height: 640px;
+        }
+        div#box1{
+            position: relative;
+            border: black solid 9px;
+            top: 10px;
+            bottom: 10px;
+            left: 16%;
+            width: 80%;
+            border-radius: 20%;
+            height: 100%;
+            background-color:aqua;
+            box-sizing: border-box;
+        }
+        div#box2{
+            position: relative;
+            border: black solid 9px;
+            top: 10px;
+            bottom: 10px;
+            left: 16%;
+            width: 80%;
+            border-radius: 20%;
+            height: 100%;
+            background-color:aqua;
+            box-sizing: border-box;
+        }
+    </style>
+    
+    <script>
+        function exit1(){
+            document.getElementById("box1").style.backgroundColor = "white";
+        }
+        function exit2(){
+            document.getElementById("box2").style.backgroundColor = "white";
+        }
+
+        function hover1(){
+            document.getElementById("box1").style.backgroundColor = "red";
+        }
+        function hover2(){
+            document.getElementById("box2").style.backgroundColor = "red";
+        }
+
+        function deploy(){
+            document.getElementById("box1").style.backgroundColor = "gray";
+            document.location="yml.html"
+       }
+       function cmd(){
+            document.getElementById("box2").style.backgroundColor = "gray";
+            document.location="cmd.html"
+       }
+    </script>
+
+    <body style="background-color: #fce093;">
+        
+        <div id="base" style="background-color: rgb(102, 255, 102);">
+            <div style="font-size: 500%;font-family: 'Courier New', Courier, monospace;background:rgb(1, 90, 255);position: relative;width: 98%;align-self: center;left: 10px;top: 10px;border: rgb(255, 238, 0) solid 5px;"><b><u>Home</u></b></div>
+            <br>
+            <hr style="height:4px;border-width:70%;color: black;background-color:black;">
+            <br>
+            <div style="width: 90%;border:black;">
+		    <br><br><br>
+                <div onclick="deploy();" onmouseover="hover1();" onmouseout="exit1();" id="box1" name="deploy" style="text-align: center;font-family: 'Courier New', Courier, monospace;font-size: 600%;"><u>Upload File</u></div>
+		<br><br><br><br><br>
+                <div onclick="cmd();" id="box2" onmouseover="hover2();" onmouseout="exit2();" style="text-align: center;font-family: 'Courier New', Courier, monospace;font-size: 600%;"><u>Commands</u></div>
+                <br>
+            </div>
+            
+        </div>
+        <br>
+    </body>
+</html>
